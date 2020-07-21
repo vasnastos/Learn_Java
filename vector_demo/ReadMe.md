@@ -1,7 +1,4 @@
 <html>
-<head>
-<title>Introduction to ArrayLists and Vectors in Java</title>
-</head>
 <body>
 <h1 style="text-align:center">Author:Nastos Vasileios</h1>
 <h2 style="text-align:center">Informatics and telecommunications</h2>
