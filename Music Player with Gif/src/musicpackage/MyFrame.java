@@ -34,6 +34,8 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TableColumn;
 import javafx.scene.media.Media;
@@ -45,7 +47,7 @@ public class MyFrame extends JFrame{
    MediaPlayer player=null;
    JLabel gifsong;
    JSlider duration;
-   String song="";
+   JSlider slider;
    double volume=0.10;
    boolean muted=false;
    boolean paused=true;
@@ -78,11 +80,6 @@ public class MyFrame extends JFrame{
 	   {
 		   public void actionPerformed(ActionEvent ae)
 		   {
-			   if(song=="")
-			   {
-				   JOptionPane.showMessageDialog(null,"No song is currently played");
-				   return;
-			   }
 			   JOptionPane.showMessageDialog(null,"Song Played:"+lst.getSelectedValue());
 		   }
 	   });
@@ -127,21 +124,22 @@ public class MyFrame extends JFrame{
 			   }
 		   }
 	    });
-	   JSlider slider=new JSlider(JSlider.HORIZONTAL);
-	   slider.setMaximum(100);
+	   slider=new JSlider(JSlider.HORIZONTAL);
 	   slider.setMinimum(0);
-	   slider.setValue((int)(volume*100));
+	   slider.setMaximum(100);
+	   slider.setValue(10);
 	   slider.addChangeListener(new ChangeListener()
-	    {
+		{
 
 			@Override
 			public void stateChanged(ChangeEvent arg0) {
-				int newval=slider.getValue();
-				volume=(double)(newval)/100.0;
+				int k=slider.getValue();
+				volume=(double)k/100.0;
 				player.setVolume(volume);
+				
 			}
-          
-	    });
+		   
+		});
 	   JButton next=new JButton("Next");
 	   next.addActionListener(new ActionListener()
 	   {
@@ -152,7 +150,6 @@ public class MyFrame extends JFrame{
 				   player.stop();
 			   }
 			   int i=lst.getSelectedIndex();
-			   System.out.print(lst.getLastVisibleIndex());
 			   if(i==lst.getLastVisibleIndex())
 			   {
 			    i=0;
@@ -197,6 +194,7 @@ public class MyFrame extends JFrame{
 			   {
 				   i--;
 			   }
+			   lst.setSelectedIndex(i);
 			   File fp=new File(lst.getSelectedValue());
 			   String filepath=fp.toURI().toString();
 			   Media m=new Media(filepath);
@@ -238,10 +236,14 @@ public class MyFrame extends JFrame{
 					Media md=new Media(filepath);
 					player=new MediaPlayer(md);
 					player.setVolume(volume);
-					 player.setOnEndOfMedia(new Runnable()
+					player.setOnEndOfMedia(new Runnable()
 			          {
 			            @Override
 					     public void run() {
+			            	if(player!=null)
+			            	{
+			            		player.stop();
+			            	}
 					       int index=lst.getSelectedIndex();
 					       if(index==lst.getLastVisibleIndex())
 					       {
