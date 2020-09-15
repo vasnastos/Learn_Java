@@ -2,11 +2,12 @@
 <body>
 <h3>Απλές Ασκήσεις σε Java</h3>
 <ol>
-</li>Να γραφεί συνάρτηση void showPasso(int times) η οποία θα εμφανίζει
-σε παραθύρο της java(showMessageDialog) έναν ακέραιο αριθμό που θα εισάγει ο χρήστης όσες φορές είναι η παράμετρος times.</li>
+<li>Να γραφεί συνάρτηση void showPasso(int times) η οποία θα εμφανίζει
+σε παραθύρο της java(showMessageDialog) έναν ακέραιο αριθμό που θα εισάγει ο χρήστης όσες φορές είναι η παράμετρος times.
 <ul>
 <li><a href="">Solution</a></li>
 </ul>
+   </li>
 <li>Έστω η κατηγορία που περιγράφει μαθητές:<br>
 <img src="https://github.com/vasnastos/Page_Images/blob/master/src/javasimple2.png" width="1024" height="630"></img>
 <br>
