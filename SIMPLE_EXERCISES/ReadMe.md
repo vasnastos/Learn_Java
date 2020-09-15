@@ -5,7 +5,7 @@
 <li>Να γραφεί συνάρτηση void showPasso(int times) η οποία θα εμφανίζει
 σε παραθύρο της java(showMessageDialog) έναν ακέραιο αριθμό που θα εισάγει ο χρήστης όσες φορές είναι η παράμετρος times.
 <ul>
-<li><a href="">Solution</a></li>
+<li><a href="https://github.com/vasnastos/Page_Images/raw/master/EXERSICE_1.zip">Solution</a></li>
 </ul>
    </li>
 <li>Έστω η κατηγορία που περιγράφει μαθητές:<br>
