@@ -29,7 +29,7 @@
 <li>Να εμφανίζει τον μέσο όρο των μισθών που υπερβαίνουν τις 2000 ευρώ.</li>
 </ol></li>
 <ul>
-<a href="">Solution</a></li>
+<a href="https://github.com/vasnastos/Page_Images/raw/master/EXERCISE_3.zip">Solution</a></li>
 </ul>
 </ol>
 </body>
