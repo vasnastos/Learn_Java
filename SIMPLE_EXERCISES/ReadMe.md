@@ -13,7 +13,7 @@
 <br>
 Να γραφεί μία κατηγορία με το όνομα MyFrame η οποία θα επεκτείνει την JFrame και στα ιδιωτικά της πεδία θα περιέχει:
    <ol>
-   <li>ArrayList <Student> sp</li>
+   <li>ArrayList <'Student'> sp</li>
    <li>JButton readButton</li>
    <li>JButton showButton</li>
    </ol>
