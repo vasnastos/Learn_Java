@@ -1,0 +1,8 @@
+Murder on Orient Express,Agatha Cristi,67.21
+And then There were none,Agatha Cristi,23.45
+Don Quixote,Miguel de Cervantes,120.98
+The Great Garsby,F. Scott Fitzgerald,120.34
+War and Peace,Leo Tolstoy,56.78
+Hamlet,William Shakespeare,456.78
+Crime and Punishment,Fyodor Dostoyevsky,678.9
+Alice's Adventures in Wonderland,Lewis Carroll,56.721
